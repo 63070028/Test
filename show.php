@@ -38,7 +38,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <td> <div align="center">
               <div class="row">
                   <div class="card-body"> 
-                    <a href="" class="btn btn-primary">ลบ </a>
+                    <a href="https://datatast.azurewebsites.net/delete.php" class="btn btn-primary">ลบ </a>
                     <a href="" class="btn btn-primary">แก้ไข </a>
                   </div>
               </div>
