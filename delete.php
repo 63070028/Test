@@ -11,7 +11,7 @@ $name = $_POST['name'];
 $comment = $_POST['comment'];
 $link = $_POST['link'];
 
-    $sql = "DELETE FROM employees WHERE guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+    $sql = "DELETE FROM guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
