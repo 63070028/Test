@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment Form</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
 </head>
 <body>
-<form method="post" class="form-horizontal mt-5">
+
+    <div class="container">
+    <div class="display-3 text-center">Add+</div>
+
+    <?php 
+         if (isset($errorMsg)) {
+    ?>
+        <div class="alert alert-danger">
+            <strong>Wrong! <?php echo $errorMsg; ?></strong>
+        </div>
+    <?php } ?>
+    
+
+    <?php 
+         if (isset($insertMsg)) {
+    ?>
+        <div class="alert alert-success">
+            <strong>Success! <?php echo $insertMsg; ?></strong>
+        </div>
+    <?php } ?>
+
+    <form method="post" class="form-horizontal mt-5">
             
             <div class="form-group text-center">
                 <div class="row">
@@ -39,7 +60,5 @@
     <script src="js/slim.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
-</body>
-</html>
 </body>
 </html>
