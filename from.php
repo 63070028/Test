@@ -1,3 +1,33 @@
+<?php 
+    require_once('connection.php');
+
+    if (isset($_REQUEST['btn_insert'])) {
+        $firstname = $_REQUEST['txt_firstname'];
+        $lastname = $_REQUEST['txt_lastname'];
+
+        if (empty($firstname)) {
+            $errorMsg = "Please enter Firstname";
+        } else if (empty($lastname)) {
+            $errorMsg = "please Enter Lastname";
+        } else {
+            try {
+                if (!isset($errorMsg)) {
+                    $insert_stmt = $db->prepare("INSERT INTO tbl_person(firstname, lastname) VALUES (:fname, :lname)");
+                    $insert_stmt->bindParam(':fname', $firstname);
+                    $insert_stmt->bindParam(':lname', $lastname);
+
+                    if ($insert_stmt->execute()) {
+                        $insertMsg = "Insert Successfully...";
+                        header("refresh:2;index.php");
+                    }
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
