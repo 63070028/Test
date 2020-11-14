@@ -14,11 +14,11 @@
 <div class="container">
   <form action = "insert.php" method = "post" id="CommentForm" >
         Name:<br>
-        <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
+        <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter Name"> <br>
         Comment:<br>
         <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
         Link:<br>
-        <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
+        <input type="text" name = "link" class="form-control" id="idLink" placeholder="Enter Link"> <br><br>
         <input type="submit" name="btn_insert" class="btn btn-success" id="commentBtn" value="Insert" >
         <a href="index.php" class="btn btn-danger">Cancel</a>
     </form>
