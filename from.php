@@ -5,7 +5,7 @@
 </head>
 <body>
   <form action = "insert.php" method = "post" id="CommentForm" width="600">
-    Name:<br>
+    Name:<br width="600">
     <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
     Comment:<br>
     <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
