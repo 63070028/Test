@@ -35,7 +35,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <td><?php echo $Result['Name'];?></div></td>
       <td><?php echo $Result['Comment'];?></td>
       <td><?php echo $Result['Link'];?></td>
-      <td><div class="card-body"> <a href="" class="btn btn-primary">ลบ </div></a> <div class="card-body"> <a href="" class="btn btn-primary">แก้ไข </div></a></td>
+      <td><div class="row"><div class="card-body"> <a href="" class="btn btn-primary">ลบ </div></a> <div class="card-body"> <a href="" class="btn btn-primary">แก้ไข </div> </div></a></td>
     </tr>
   <?php
   }
