@@ -50,7 +50,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   ?>
   </table>
     <div class="card">
-      <a href="https://datatast.azurewebsites.net/from.php" class="btn btn-success mb-3">เพิ่ม</a>
+      <a href="https://datatast.azurewebsites.net/from.php" class="btn btn-success mb-3">Add+</a>
     </div>
 <?php
 mysqli_close($conn);
