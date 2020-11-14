@@ -20,7 +20,8 @@
         <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
         Link:<br>
         <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
-        <input type="submit" id="commentBtn">
+        <input type="submit" name="btn_insert" class="btn btn-success" id="commentBtn" value="Insert" >
+        <a href="index.php" class="btn btn-danger">Cancel</a>
     </form>
 </div>
 
