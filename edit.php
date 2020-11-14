@@ -2,9 +2,9 @@
     $conn = mysqli_init();
     mysqli_real_connect($conn, 'chanapon63070028.mysql.database.azure.com', 'chanapon@chanapon63070028', 'Kong1312', 'itflab', 3306);
 
-    if (isset($_REQUEST['update_id'])) {
+    if (isset($Result['update_id'])) {
         try {
-            $ID = $_REQUEST['update_id'];
+            $ID = $Result['update_id'];
             $select_stmt = $db->prepare("SELECT * FROM guestbook WHERE ID = :ID");
             $select_stmt->bindParam(':ID', $ID);
             $select_stmt->execute();
@@ -15,10 +15,10 @@
         }
     }
 
-    if (isset($_REQUEST['btn_update'])) {
-        $name_up = $_REQUEST['txt_firstname'];
-        $comment_up = $_REQUEST['txt_lastname'];
-        $link_up = $_REQUEST['txt_lastname'];
+    if (isset($Result['btn_update'])) {
+        $name_up = $Result['txt_firstname'];
+        $comment_up = $Result['txt_lastname'];
+        $link_up = $Result['txt_lastname'];
 
         if (empty($name_up)) {
             $errorMsg = "Please Enter Fisrtname";
