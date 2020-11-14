@@ -8,21 +8,38 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
 </head>
 <body>
-  <div class="container">
-    <form method="post" class="form-horizontal mt-5" action = "insert.php" method = "post" id="CommentForm" >
-      <div class="form-group text-center">
-        Name:<br class="col-sm-9">
-        <input type="text" name = "name" id="idName" class="form-control" placeholder="Enter Name"> <br>
-        Comment:<br class="col-sm-9">
-        <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
-        Link:<br class="col-sm-9">
-        <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
-        <input type="submit" id="commentBtn">
-      </div>
+<form method="post" class="form-horizontal mt-5">
+            
+            <div class="form-group text-center">
+                <div class="row">
+                    <label for="firstname" class="col-sm-3 control-label">Fisrtname</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="txt_firstname" class="form-control" placeholder="Enter Firstname...">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <div class="row">
+                    <label for="lastname" class="col-sm-3 control-label">lastname</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="txt_lastname" class="form-control" placeholder="Enter Lastname...">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <div class="col-md-12 mt-3">
+                    <input type="submit" name="btn_insert" class="btn btn-success" value="Insert">
+                    <a href="index.php" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+
+
     </form>
-  </div>
+
     <script src="js/slim.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
+</body>
+</html>
 </body>
 </html>
