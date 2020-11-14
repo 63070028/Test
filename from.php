@@ -19,5 +19,8 @@
       <input type="submit" id="commentBtn">
     </form>
   </div>
+    <script src="js/slim.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
