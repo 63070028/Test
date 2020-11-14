@@ -4,7 +4,7 @@
 
     if (isset($_REQUEST['update_id'])) {
         try {
-            $id = $_REQUEST['update_id'];
+            $ID = $_REQUEST['update_id'];
             $select_stmt = $db->prepare("SELECT * FROM guestbook WHERE ID = :ID");
             $select_stmt->bindParam(':ID', $ID);
             $select_stmt->execute();
