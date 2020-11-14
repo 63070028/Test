@@ -9,14 +9,16 @@
 </head>
 <body>
   <div class="container">
-    <form action = "insert.php" method = "post" id="CommentForm" >
-      Name:<br>
-      <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
-      Comment:<br>
-      <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
-      Link:<br>
-      <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
-      <input type="submit" id="commentBtn">
+    <form method="post" class="form-horizontal mt-5" action = "insert.php" method = "post" id="CommentForm" >
+      <div class="form-group text-center">
+        Name:<br class="col-sm-9">
+        <input type="text" name = "name" id="idName" class="form-control" placeholder="Enter Name"> <br>
+        Comment:<br class="col-sm-9">
+        <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
+        Link:<br class="col-sm-9">
+        <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
+        <input type="submit" id="commentBtn">
+      </div>
     </form>
   </div>
     <script src="js/slim.js"></script>
