@@ -15,7 +15,7 @@
         $delete_stmt->bindParam(':ID', $ID);
         $delete_stmt->execute();
 
-        header('Location:index.php');
+        header('Location:show.php');
     }
 ?>
 
