@@ -16,9 +16,9 @@
     }
 
     if (isset($Result['btn_update'])) {
-        $name_up = $Result['txt_firstname'];
-        $comment_up = $Result['txt_lastname'];
-        $link_up = $Result['txt_lastname'];
+        $name_up = $Result['fname'];
+        $comment_up = $Result['comment'];
+        $link_up = $Result['link'];
 
         if (empty($name_up)) {
             $errorMsg = "Please Enter Fisrtname";
