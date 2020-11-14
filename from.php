@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-  <form action = "insert.php" method = "post" id="CommentForm" >
+  <form action = "insert.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
         <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter Name"> <br>
         Comment:<br>
