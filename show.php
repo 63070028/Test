@@ -39,7 +39,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
               <div class="row">
                   <div class="card-body"> 
                     <a href="https://datatast.azurewebsites.net/delete.php" class="btn btn-primary">ลบ </a>
-                    <a href="" class="btn btn-primary">แก้ไข </a>
+                    <a href="edit.php?update_id=<?php echo $Result["id"]; ?>" class="btn btn-warning">Edit</a>
                   </div>
               </div>
             </div>
