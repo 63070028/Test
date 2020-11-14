@@ -41,7 +41,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   ?>
   </table>
     <div class="card-body">
-      <a style="center;" href="https://datatast.azurewebsites.net/from.php" class="btn btn-primary">เพิ่ม</a>
+      <a <div align="center"> href="https://datatast.azurewebsites.net/from.php" class="btn btn-primary">เพิ่ม</a>
     </div>
 <?php
 mysqli_close($conn);
