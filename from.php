@@ -1,64 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+	<title>Comment Form</title>
 </head>
 <body>
-
-    <div class="container">
-    <div class="display-3 text-center">Add+</div>
-
-    <?php 
-         if (isset($errorMsg)) {
-    ?>
-        <div class="alert alert-danger">
-            <strong>Wrong! <?php echo $errorMsg; ?></strong>
-        </div>
-    <?php } ?>
-    
-
-    <?php 
-         if (isset($insertMsg)) {
-    ?>
-        <div class="alert alert-success">
-            <strong>Success! <?php echo $insertMsg; ?></strong>
-        </div>
-    <?php } ?>
-
-    <form method="post" class="form-horizontal mt-5">
-            
-            <div class="form-group text-center">
-                <div class="row">
-                    <label for="firstname" class="col-sm-3 control-label">Fisrtname</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="txt_firstname" class="form-control" placeholder="Enter Firstname...">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group text-center">
-                <div class="row">
-                    <label for="lastname" class="col-sm-3 control-label">lastname</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="txt_lastname" class="form-control" placeholder="Enter Lastname...">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group text-center">
-                <div class="col-md-12 mt-3">
-                    <input type="submit" name="btn_insert" class="btn btn-success" value="Insert">
-                    <a href="index.php" class="btn btn-danger">Cancel</a>
-                </div>
-            </div>
-
-
-    </form>
-
-    <script src="js/slim.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+  <form action = "insert.php" method = "post" id="CommentForm" >
+    Name:<br>
+    <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
+    Comment:<br>
+    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
+    Link:<br>
+    <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
+    <input type="submit" id="commentBtn">
+  </form> 
 </body>
 </html>
