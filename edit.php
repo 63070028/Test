@@ -5,7 +5,7 @@
     if (isset($_REQUEST['update_id'])) {
         try {
             $id = $_REQUEST['update_id'];
-            $select_stmt = $db->prepare("SELECT * FROM  WHERE ID = :ID");
+            $select_stmt = $db->prepare("SELECT * FROM guestbook WHERE ID = :ID");
             $select_stmt->bindParam(':ID', $ID);
             $select_stmt->execute();
             $Result = $select_stmt->fetch(PDO::FETCH_ASSOC);
