@@ -39,7 +39,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
               <div class="row">
                   <div class="card-body"> 
                     <a href="edit.php?update_id=<?php echo $Result["ID"]; ?>" class="btn btn-warning">Edit</a>
-                    <a href="delete_id"<?php echo $Result["ID"]; ?>" class="btn btn-danger">Delete</a>
+                    <a href="delete_id"<?php echo $Result["ID"]; ?> class="btn btn-danger">Delete</a>
                   </div>
               </div>
             </div>
