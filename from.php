@@ -16,7 +16,7 @@
         Name:<br>
         <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter Name"> <br>
         Comment:<br>
-        <textarea rows="100" cols="100" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
+        <textarea rows="50" cols="50" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
         Link:<br>
         <input type="text" name = "link" class="form-control" id="idLink" placeholder="Enter Link"> <br><br>
         <input type="submit" name="btn_insert" class="btn btn-success" id="commentBtn" value="Insert" >
