@@ -7,4 +7,10 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
+if(isset($_POST["ID"])) {
+    $id = $_POST["ID"];
+    
+    echo $id;
+
+}
 ?>
