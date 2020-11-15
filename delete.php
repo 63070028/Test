@@ -7,10 +7,4 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-  if(isset($_POST["delete_id"]) {
-      $id = $_POST["delete_id"];
-
-      echo $id;
-  }
-  
 ?>
