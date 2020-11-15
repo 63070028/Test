@@ -13,7 +13,7 @@ if (isset($_REQUEST['delete_id'])) {
     $select_stmt = $db->prepare("SELECT * FROM guestbook WHERE ID = :ID");
     $select_stmt->bindParam(':ID', $id);
     $select_stmt->execute();
-    $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
+    $Result = $select_stmt->fetch(PDO::FETCH_ASSOC);
 
     // Delete an original record from db
     $delete_stmt = $db->prepare('DELETE FROM guestbook WHERE ID = :ID');
