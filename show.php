@@ -16,7 +16,7 @@ if (isset($_REQUEST['delete_id'])) {
     $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
 
     // Delete an original record from db
-    $delete_stmt = $db->prepare('DELETE FROM tbl_person WHERE ID = :id');
+    $delete_stmt = $db->prepare('DELETE FROM guestbook WHERE ID = :id');
     $delete_stmt->bindParam(':id', $id);
     $delete_stmt->execute();
 
