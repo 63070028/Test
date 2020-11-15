@@ -8,20 +8,39 @@ if (mysqli_connect_errno($conn))
 }
 
 if (isset($_REQUEST['delete_id'])) {
-    $id = $_REQUEST['delete_id'];
-      
-    $select_stmt = $db->prepare("SELECT * FROM guestbook WHERE ID = :ID");
-    $select_stmt->bindParam(':ID', $id);
-    $select_stmt->execute();
-    $Result = $select_stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Delete an original record from db
-    $delete_stmt = $db->prepare('DELETE FROM guestbook WHERE ID = :ID');
-    $delete_stmt->bindParam(':ID', $id);
-    $delete_stmt->execute();
+    $sql = "DELETE FROM guestbook WHERE ID = :ID";
 
-    header('Location:show.php');
-  }
+        if($stmt = mysqli_prepare($conn, $sql)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "i", $param_id);
+        
+        // Set parameters
+        $param_id = trim($_REQUEST['delete_id']);
+        
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            // Records deleted successfully. Redirect to landing page
+            header("location: show.php");
+            exit();
+        } else{
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+    }
+     
+    // Close statement
+    mysqli_stmt_close($stmt);
+    
+    // Close connection
+    mysqli_close($conn);
+} else{
+    // Check existence of id parameter
+    if(empty(trim($_GET["id"]))){
+        // URL doesn't contain id parameter. Redirect to error page
+        header("location: error.php");
+        exit();
+    }
+}
 
 ?>
 
