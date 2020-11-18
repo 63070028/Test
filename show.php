@@ -1,49 +1,3 @@
-<?php
-
-$conn = mysqli_init();
-mysqli_real_connect($conn, 'chanapon63070028.mysql.database.azure.com', 'chanapon@chanapon63070028', 'Kong1312', 'itflab', 3306);
-if (mysqli_connect_errno($conn))
-{
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
-
-if (isset($_REQUEST['delete_id'])) {
-
-    $sql = "DELETE FROM guestbook WHERE ID = :ID";
-
-        if($stmt = mysqli_prepare($conn, $sql)){
-        // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "i", $param_id);
-        
-        // Set parameters
-        $param_id = trim($_REQUEST['delete_id']);
-        
-        // Attempt to execute the prepared statement
-        if(mysqli_stmt_execute($stmt)){
-            // Records deleted successfully. Redirect to landing page
-            header("location: show.php");
-            exit();
-        } else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-    }
-     
-    // Close statement
-    mysqli_stmt_close($stmt);
-    
-    // Close connection
-    mysqli_close($conn);
-} else{
-    // Check existence of id parameter
-    if(empty(trim($_GET["id"]))){
-        // URL doesn't contain id parameter. Redirect to error page
-        header("location: error.php");
-        exit();
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +39,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
               <div class="row">
                   <div class="card-body"> 
                     <a href="edit.php?update_id=<?php echo $Result["ID"]; ?>" class="btn btn-warning">Edit</a>
-                    <a href="?delete_id=<?php echo $Result["ID"]; ?>" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?update_id==<?php echo $Result["ID"]; ?>" class="btn btn-danger">Delete</a>
                   </div>
               </div>
             </div>

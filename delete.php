@@ -7,10 +7,15 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if(isset($_POST["ID"])) {
-    $id = $_POST["ID"];
-    
-    echo $id;
+$id = $_GET['ID'];
 
-}
+$sql = "DELETE FROM guestbook WHERE ID = $id";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+  
+mysqli_close($conn);
 ?>
