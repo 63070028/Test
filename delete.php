@@ -7,9 +7,11 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$id = $_GET['id'];
-echo $id;
+if (isset($_GET['id'])) {
+        $id = $_GET['id'];
 
+        echo $id;
 
+}
 
 ?>
