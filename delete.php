@@ -7,11 +7,10 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if (isset($Result['ID'])) {
-        $id = $Result['ID'];
+$id = $Result['ID'];
 
-        echo $id;
+echo $id;
 
-}
+
 
 ?>
