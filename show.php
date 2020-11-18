@@ -38,8 +38,8 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <td> <div align="center">
               <div class="row">
                   <div class="card-body"> 
-                    <a href="edit.php?update_id=<?php echo $_POST['id']; ?>" class="btn btn-warning">Edit</a>
-                    <a href="delete.php?update_id=<?php echo $_POST['id']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="edit.php?update_id=<?php echo $Result['Name']; ?>" class="btn btn-warning">Edit</a>
+                    <a href="delete.php?update_id=<?php echo $Result['Name']; ?>" class="btn btn-danger">Delete</a>
                   </div>
               </div>
             </div>
