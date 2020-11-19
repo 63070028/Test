@@ -10,6 +10,7 @@ if (mysqli_connect_errno($conn))
 $id = $_GET['update_id'];
 
 echo $id;
+
 if (isset($_REQUEST['btn_update'])) {
     $name_up = $_POST['name'];
     $comment_up = $_POST['comment'];
