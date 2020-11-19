@@ -9,6 +9,7 @@ if (mysqli_connect_errno($conn))
 
 $id = $_GET['update_id'];
 
+echo $id;
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
