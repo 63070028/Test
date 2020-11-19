@@ -20,7 +20,7 @@
         Link:<br>
         <input type="text" name = "link" class="form-control" id="idLink" placeholder="Enter Link"> <br><br>
         <input type="submit" name="btn_insert" class="btn btn-success" id="commentBtn" value="Insert" >
-        <a href="index.php" class="btn btn-danger">Cancel</a>
+        <a href="show.php" class="btn btn-danger">Cancel</a>
     </form>
 </div>
 

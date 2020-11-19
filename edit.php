@@ -48,8 +48,8 @@ mysqli_close($conn);
         <textarea rows="10" cols="20" class="form-control" name = "comment" id="idComment" value="<?php echo $comment; ?>"> </textarea><br>  
         Link:<br>
         <input type="text" name = "link" class="form-control" id="idLink" value="<?php echo $comment; ?>"> <br><br>
-        <input type="submit" name="btn_insert" class="btn btn-success" id="commentBtn" value="Insert" >
-        <a href="index.php" class="btn btn-danger">Cancel</a>
+        <input type="submit" name="btn_update" class="btn btn-success" id="commentBtn" value="Update" >
+        <a href="show.php" class="btn btn-danger">Cancel</a>
     </form>
 </div>
 
