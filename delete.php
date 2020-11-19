@@ -7,7 +7,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$id = $Result['ID'];
+$id = $_GET['delete_id'];
 
 echo $id;
 
@@ -54,7 +54,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
               <div class="row">
                   <div class="card-body"> 
                     <a href="edit.php?/update_id=<?php echo $Result['ID']; ?>" class="btn btn-warning">Edit</a>
-                    <a href="delete.php?/update_id=<?php echo $Result['ID']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?/delete_id=<?php echo $Result['ID']; ?>" class="btn btn-danger">Delete</a>
                   </div>
               </div>
             </div>
