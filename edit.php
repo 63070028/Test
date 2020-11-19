@@ -42,7 +42,6 @@ if (isset($_REQUEST['btn_update'])) {
 <body>
 
 <div class="container">
-  <form action = "insert.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
         <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $name; ?>"> <br>
         Comment:<br>
