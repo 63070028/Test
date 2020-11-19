@@ -11,7 +11,22 @@ $id = $_GET['update_id'];
 
 echo $id;
 
+$name_up = $_POST['name'];
+$comment_up = $_POST['comment'];
+$link_up = $_POST['link'];
+
+$sql = "UPDATE guestbook SET Name = $name_up, Comment = $comment_up, Link = $link_up WHERE id = $id";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+  
+mysqli_close($conn);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
