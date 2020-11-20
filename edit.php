@@ -27,7 +27,7 @@ $Result = "SELECT * FROM guestbook WHERE id = $id";
 <div class="container">
   <form action = "update.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
-        <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $name;?>"> <br>
+        <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $name?>"> <br>
         Comment:<br>
         <textarea rows="10" cols="20" class="form-control" name = "comment" id="idComment" value="<?php echo $Result['Comment'];?>"></textarea><br>  
         Link:<br>
