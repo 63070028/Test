@@ -17,12 +17,13 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
+$res = mysqli_query($conn, $sql);
 ?>
 
-  <?php
-  while($Result = mysqli_fetch_array($sql))
-  {
-  ?>
+<?php
+while($Result = mysqli_fetch_array($res))
+{
+?>
 
 
 <!DOCTYPE html>
@@ -50,6 +51,6 @@ mysqli_close($conn);
         <a href="show.php" class="btn btn-danger">Cancel</a>
     </form>
 </div>
-
+}
 </body>
 </html>
