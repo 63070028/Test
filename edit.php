@@ -41,7 +41,21 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, $sql);
 $Result = mysqli_fetch_array($res);
-echo $Result['Name'];
+
 
 ?>
 
+<div class="container">
+  <form action = "update.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
+        Name:<br>
+        <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
+        Comment:<br>
+        <input rows="10" cols="20" class="form-control" name = "comment" id="idComment" value="<?php echo $Result['Comment'];?>"> <br>
+        Link:<br>
+        <input type="text" name = "link" class="form-control" id="idLink" value="<?php echo $Result['Link'];?>"> <br><br>
+        <input type="submit" name="btn_update" class="btn btn-success" id="commentBtn" value="Update" >
+        <a href="show.php" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
