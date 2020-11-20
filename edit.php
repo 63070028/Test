@@ -23,6 +23,5 @@ $res = mysqli_query($conn, $sql);
 <?php
 while($Result = mysqli_fetch_array($res))
 {
+  echo $Result['Name'];
 ?>
-  
-<input type="text" class="form-control" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
