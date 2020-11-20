@@ -18,10 +18,6 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 ?>
 
-<?php
-  $Result = mysqli_fetch_array($sql))
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
