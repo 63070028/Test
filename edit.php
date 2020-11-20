@@ -16,6 +16,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
+
 ?>
 
 <!DOCTYPE html>
@@ -30,10 +31,7 @@ mysqli_close($conn);
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php
-  while($Result = mysqli_fetch_array($sql))
-  {
-  ?>
+
 <div class="container">
   <form action = "update.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
