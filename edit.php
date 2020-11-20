@@ -15,13 +15,15 @@ if (mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-mysqli_close($conn);
 
 $res = mysqli_query($conn, $sql);
+while($Result = mysqli_fetch_array($res))
+{
+  echo $Result['name'];
 ?>
 
 <?php
 while($Result = mysqli_fetch_array($res))
 {
-  echo $Result['Name'];
+  echo $Result['name'];
 ?>
