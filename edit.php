@@ -5,11 +5,9 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM guestbook');
-?>
-<?php
 $id = $_GET['update_id'];
 echo $id
-$Result = mysqli_fetch_array($id)
+$res = mysqli_query($id, 'SELECT * FROM guestbook');
 ?>
-<?php echo $Result['Name'];?>
+
+
