@@ -9,10 +9,6 @@ if (mysqli_connect_errno($conn))
 
 $id = $_GET['update_id'];
 
-$res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id');
-
-$Result = mysqli_fetch_array($res)
-
-echo $Result['Name'];
+echo $id
 
 ?>
