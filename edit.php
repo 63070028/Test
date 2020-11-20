@@ -8,17 +8,3 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-
-<?php
-  while($Result = mysqli_fetch_array($res))
-  {
-    echo $Result
-?>
-
-<?php
-  $id = $_GET['update_id'];
-
-  echo $id
-
-
-?>
