@@ -16,10 +16,11 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 ?>
+
 <?php
-  while($Result = mysqli_fetch_array($sql))
-  {
+  $Result = mysqli_fetch_array($sql))
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
