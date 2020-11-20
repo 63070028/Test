@@ -7,7 +7,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$id = $_GET['update_id'];
+$id = $_POST['id'];
 echo $id;
 
 $name = $_POST['name'];
