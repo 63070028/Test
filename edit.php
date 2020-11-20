@@ -8,6 +8,13 @@ if (mysqli_connect_errno($conn))
 $id = $_GET['update_id'];
 echo $id;
 $Result = "SELECT * FROM guestbook WHERE id = $id";
+if (mysqli_query($conn, $Result)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $Result . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
