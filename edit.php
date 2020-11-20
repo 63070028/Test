@@ -13,7 +13,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id');
   while($Result = mysqli_fetch_array($res))
   {
     echo $Result
-  ?>
+?>
 
 <?php
   $id = $_GET['update_id'];
