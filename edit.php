@@ -11,6 +11,13 @@ $id = $_GET['update_id'];
 
 echo $id
 
-$res = mysqli_query($conn, 'SELECT * FROM guestbook WHERE id = $id');
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+
+while($Result = mysqli_fetch_array($res)) {
+       echo $Result['Name'];
+       echo $Result['Comment'];
+       echo $Result['Link'];
+
+}
 
 ?>
