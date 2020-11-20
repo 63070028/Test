@@ -41,4 +41,8 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, $sql);
 ?>
-
+<?php
+  while($Result = mysqli_fetch_array($res))
+  {
+  ?>
+  <?php echo $Result['Name'];?>
