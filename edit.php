@@ -6,7 +6,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $id = $_GET['update_id'];
-echo $id;
+
 $sql = "SELECT * FROM guestbook WHERE id = $id";
 
 if (mysqli_query($conn, $sql)) {
