@@ -7,7 +7,7 @@ if (mysqli_connect_errno($conn))
 }
 $id = $_GET['update_id'];
 echo $id
-$res = mysqli_query($id, 'SELECT * FROM guestbook');
+
 ?>
 
 
