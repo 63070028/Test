@@ -17,10 +17,10 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
-$res = mysqli_query($conn, $sql);
 ?>
 
 <?php
+$res = mysqli_query($conn, $sql);
 while($Result = mysqli_fetch_array($res))
 {
 ?>
