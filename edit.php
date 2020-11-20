@@ -20,3 +20,18 @@ mysqli_close($conn);
 
 ?>
 
+<?php
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'chanapon63070028.mysql.database.azure.com', 'chanapon@chanapon63070028', 'Kong1312', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+?>
+
+<?php
+  while($Result = mysqli_fetch_array($res))
+  {
+  ?>
+  <?php echo $Result['Name'];?>
