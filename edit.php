@@ -7,11 +7,11 @@ if (mysqli_connect_errno($conn))
 }
 $id = $_GET['update_id'];
 echo $id;
-$Result = "SELECT * FROM guestbook WHERE id = $id";
-if (mysqli_query($conn, $Result)) {
+$sql = "SELECT * FROM guestbook WHERE id = $id";
+if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 } else {
-  echo "Error: " . $Result . "<br>" . mysqli_error($conn);
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
@@ -33,11 +33,11 @@ mysqli_close($conn);
 <div class="container">
   <form action = "update.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
-        <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
+        <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $sql['Name'];?>"> <br>
         Comment:<br>
-        <input rows="10" cols="20" class="form-control" name = "comment" id="idComment" value="<?php echo $Result['Comment'];?>"> <br>
+        <input rows="10" cols="20" class="form-control" name = "comment" id="idComment" value="<?php echo $sql['Comment'];?>"> <br>
         Link:<br>
-        <input type="text" name = "link" class="form-control" id="idLink" value="<?php echo $Result['Link'];?>"> <br><br>
+        <input type="text" name = "link" class="form-control" id="idLink" value="<?php echo $sql['Link'];?>"> <br><br>
         <input type="submit" name="btn_update" class="btn btn-success" id="commentBtn" value="Update" >
         <a href="show.php" class="btn btn-danger">Cancel</a>
     </form>
