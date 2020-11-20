@@ -11,7 +11,7 @@ $id = $_GET['update_id'];
 
 echo $id
 
-$sql = "SELECT * FROM guestbook WHERE id = $id";
+
 
 
 
