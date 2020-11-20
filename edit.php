@@ -11,5 +11,6 @@ $id = $_GET['update_id'];
 
 echo $id
 
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
 
 ?>
