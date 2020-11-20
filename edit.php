@@ -8,6 +8,7 @@ if (mysqli_connect_errno($conn))
 $id = $_GET['update_id'];
 echo $id;
 $sql = "SELECT * FROM guestbook WHERE id = $id";
+
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 } else {
