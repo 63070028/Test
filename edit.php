@@ -41,7 +41,6 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, $sql);
 $Result = mysqli_fetch_array($res);
-  echo $Result['ID'];
 
 ?>
 
