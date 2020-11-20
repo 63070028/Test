@@ -46,8 +46,7 @@ $Result = mysqli_fetch_array($res);
 ?>
 
 <div class="container">
-  <form action = "update.php" method = "post" id="CommentForm" class="form-horizontal mt-5" >
-        <input type="hidden" id="$id">
+  <form action = "update.php?update_id=<?php echo $Result['ID']; ?>" method = "post" id="CommentForm" class="form-horizontal mt-5" >
         Name:<br>
         <input type="text" class="form-control" name = "name" id="idName" value="<?php echo $Result['Name'];?>"> <br>
         Comment:<br>
