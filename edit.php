@@ -10,4 +10,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <?php
 $id = $_GET['update_id'];
 echo $id
+$Result = mysqli_fetch_array($id)
 ?>
+<?php echo $Result['Name'];?>
