@@ -16,7 +16,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
