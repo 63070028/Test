@@ -10,7 +10,7 @@ $id = $_GET['update_id'];
 $sql = "SELECT * FROM guestbook WHERE id = $id";
 
 if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully";
+
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -40,8 +40,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, $sql);
-$Result = mysqli_fetch_array($res);
-  echo $Result['ID']
+$Result = mysqli_fetch_array($res);]
 
 ?>
 
