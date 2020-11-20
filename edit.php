@@ -17,5 +17,13 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+
+
 ?>
 
+<?php
+  while($Result = mysqli_fetch_array($res))
+  {
+  ?>
+  <?php echo $Result['Name'];?>
