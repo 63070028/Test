@@ -40,7 +40,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, $sql);
-$Result = mysqli_fetch_array($res);]
+$Result = mysqli_fetch_array($res);
 
 ?>
 
